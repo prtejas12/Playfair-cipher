@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to the world of cryptography</title>
+    <meta  charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .animate-charcter
+        {
+           text-transform: uppercase;
+          background-image: linear-gradient(
+            -25deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%
+          );
+          background-size: auto auto;
+          background-clip: border-box;
+          background-size: 200% auto;
+          color: #fff;
+          background-clip: text;
+          text-fill-color: transparent;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: textclip 2s linear infinite;
+          display: inline-block;
+              font-size:190%;
+         }
+
+        @keyframes textclip {
+          to {
+            background-position: 100% center;
+          }
+        }
+        body{
+        background-color:#212A3E;
+        padding:0px;
+        margin:0px;
+        display:grid;
+        grid-template-columns:0.1fr 1fr 1fr;
+        grid-template-rows:1fr;
+        align-items:center;
+        }
+        .nav{
+        align-items:center;
+        background-color:#F1F6F9;
+        padding:10px;
+        height:100vh;
+        text-align: center;
+        margin: auto;
+        }
+        a{
+        color:black;
+        }
+        input{
+        width:25%;
+        height:5vh;
+        align:center;
+        }
+        .form{
+        width:90%;
+        height:40%;
+        align-items:center;
+        display:grid;
+        grid-template-columns:1;
+        border:2px solid white;
+        box-shadow:0 0 2px 0px white;
+        margin:2%;
+        }
+        .form .div{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        padding:10px;
+        align-items:center;
+        }
+        form div .button{
+        margin-top:40px;
+        width:50%
+        }
+        input{
+          width:40%;
+        }
+        input:focus{
+          outline: none;
+        }
+        button{
+          height:40px;
+        }
+        @media screen and (max-width:600px) {
+            body {
+              display: grid;
+              grid-template-columns:1fr;
+              grid-template-rows:1fr 1fr 1fr;
+              justify-content: center;
+              align-items: center;
+            }
+            .nav{
+              height:400px;
+              text-align: center;
+            }
+        }
+</style>
+<script src="index.js"></script>
+</head>
+<body>
+<nav class="nav">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter">WORLD OF CRYPTOGRAPHY <br><hr><br> PLAYFAIR CIPHER</h3>
+    </div>
+  </div>
+</div>
+</nav>
+<center>
+<div class="form">
+    <center style="color:white" ><h3>Encryption</h3></center>
+    <div style="color:white" class="div">
+    <label>Enter the plain text</label>
+    <input type="text" placeholder="Enter the plain text" id="plaintext">
+    <label>Enter the Key</label>
+    <input type="text" placeholder="Enter the key " id="key"/>
+    <button onclick="enc()">submit</button>
+    </div>
+    <hr style="width:100%;color:white;"/>
+    <h4 id="encryptions" style="color:white"></h4>
+</div>
+</center>
+<center>
+<div class="form">
+    <center style="color:white" ><h3>Decryption</h3></center>
+    <div style="color:white" class="div">
+    <label>Enter the cipher text</label>
+    <input type="text" placeholder="Enter the cipher text" id="ciphertext">
+    <label>Enter the Key</label>
+    <input type="text" placeholder="Enter the key " id="key_dec"/>
+    <button onclick="dec()">submit</button>
+    </div>
+    <hr style="width:100%;color:white;"/>
+    <h4 id="render" style="color:white"></h4>
+</div>
+</body>
+</html>
